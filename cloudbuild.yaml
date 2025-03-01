@@ -1,7 +1,9 @@
 steps:
   - name: gcr.io/cloud-builders/gsutil
+    entrypoint : bash
     # Use the 'gcr.io/cloud-builders/gsutil' container image to copy files to GCS
     args: 
+      - '-c'
       - |
         gsutil -m cp -r  *.sql gs://${_BUCKET_NAME}/dags/ || exit 1
         
