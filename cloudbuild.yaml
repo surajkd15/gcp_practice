@@ -6,3 +6,7 @@ steps:
       - '-c'
       - |
         gsutil -m cp -r  *.sql gs://us-central1-surajcomp-a927308b-bucket/dags/ || exit 1
+
+logsBucket: "gs://practice-logging"
+options:
+  dynamic_substitutions: true
