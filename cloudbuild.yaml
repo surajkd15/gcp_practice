@@ -1,6 +1,5 @@
 steps:
   - name: gcr.io/cloud-builders/gsutil
-    entrypoint : bash
     # Use the 'gcr.io/cloud-builders/gsutil' container image to copy files to GCS
     args: 
       - '-c'
