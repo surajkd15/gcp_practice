@@ -8,4 +8,4 @@ GROUP BY
 ORDER BY
   total DESC
 LIMIT
-  10;
+  20;
