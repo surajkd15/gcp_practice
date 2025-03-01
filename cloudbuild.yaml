@@ -5,7 +5,7 @@ steps:
     args: 
       - '-c'
       - |
-        gsutil -m cp -r  *.sql gs://${_BUCKET_NAME}/dags/ || exit 1
+        gsutil -m cp -r  * gs://${_BUCKET_NAME}/dags/ || exit 1
         
 substitutions:
 
