@@ -15,6 +15,7 @@ with DAG(
         opr_call_sproc1 = BigQueryOperator(
             task_id="example", 
             sql = """update_query.sql""",
+            use_legacy_sql=False,
         )
 
     run_sql()
