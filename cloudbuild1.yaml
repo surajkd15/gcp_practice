@@ -26,3 +26,4 @@ substitutions:
 logsBucket: "gs://reflected-slate-452407-n3-logging"
 options:
   dynamic_substitutions: true
+
