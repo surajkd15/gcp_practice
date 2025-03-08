@@ -1,1 +1,1 @@
-file_path:'/home/airflow/gcs/data/config/config_${env_name}.json'
+file_path: '/home/airflow/gcs/data/config/config/${env_name}.json'
