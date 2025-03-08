@@ -8,6 +8,7 @@ steps:
     args: 
       - '-c'
       - |
+        #!/bin/bash
         echo "name ${bucket_name}"
         echo "name1 ${env_name}"
         envsubst < ${env_subs.yaml}
