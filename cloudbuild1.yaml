@@ -6,7 +6,7 @@ steps:
     args: 
       - '-c'
       - |
-        envsubst < ${dag5.py} | sponge ${dag5.py}
+        envsubst < ${./dag5.py} | sponge ${./dag5.py}
     env:
       - env_name=${_ENV_NAME}
 
