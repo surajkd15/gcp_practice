@@ -2,17 +2,16 @@ steps:
 
   - name: gcr.io/cloud-builders/gsutil
     entrypoint : bash
-    env:
-      - env_name=${_ENV_NAME}
-      - bucket_name=${_BUCKET_NAME} 
     args: 
       - '-c'
       - |
-        #!/bin/bash
         echo "name ${bucket_name}"
         echo "name1 ${env_name}"
         envsubst < ${env_subs.yaml}
-
+    env:
+    - env_name=${_ENV_NAME}
+    - bucket_name=${_BUCKET_NAME} 
+    
   - name: gcr.io/cloud-builders/gsutil
     entrypoint : bash
     # Use the 'gcr.io/cloud-builders/gsutil' container image to copy files to GCS
