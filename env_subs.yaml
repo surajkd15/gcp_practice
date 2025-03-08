@@ -1,2 +1,1 @@
-file_path: '/home/airflow/gcs/data/config/config_${env_name}.json'
-bucket_na: ${bucket_name}
+file_path: '/home/airflow/gcs/data/config/config_$env_name.json'
