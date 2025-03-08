@@ -5,6 +5,8 @@ steps:
     args: 
       - '-c'
       - |
+        echo "name ${_ENV_NAME}"
+        echo "name1 env_name"
         envsubst < ${./env_subs.yaml}
     env:
       - env_name=${_ENV_NAME}
