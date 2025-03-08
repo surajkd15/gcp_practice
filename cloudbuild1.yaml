@@ -9,7 +9,7 @@ steps:
       - |
         echo "name ${_ENV_NAME}"
         echo "name1 ${env_name}"
-        envsubst < env_subs.yaml
+        envsubst < ${env_subs.yaml}
 
   - name: gcr.io/cloud-builders/gsutil
     entrypoint : bash
