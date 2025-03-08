@@ -1,0 +1,28 @@
+steps:
+
+  - name: gcr.io/cloud-builders/gsutil
+    entrypoint : bash
+    # Use the 'gcr.io/cloud-builders/gsutil' container image to copy files to GCS
+    args: 
+      - '-c'
+      - |
+        envsubst < ${dag5.py} | sponge ${dag5.py}
+    env:
+      - env_name=${_ENV_NAME}
+
+  - name: gcr.io/cloud-builders/gsutil
+    entrypoint : bash
+    # Use the 'gcr.io/cloud-builders/gsutil' container image to copy files to GCS
+    args: 
+      - '-c'
+      - |
+        gsutil -m cp -r  * gs://${_BUCKET_NAME}/dags/ || exit 1
+        
+substitutions:
+
+  _BUCKET_NAME: ""
+  _ENV_NAME: ""
+
+logsBucket: "gs://reflected-slate-452407-n3-logging"
+options:
+  dynamic_substitutions: true
