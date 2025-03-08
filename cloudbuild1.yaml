@@ -5,7 +5,7 @@ steps:
     args: 
       - '-c'
       - |
-        $ envsubst < ./env_subs.yaml
+        envsubst < ${./env_subs.yaml}
     env:
       - env_name=${_ENV_NAME}
 
