@@ -5,10 +5,10 @@ steps:
     args: 
       - '-c'
       - |
-        echo "name1 ${ENV_NAME}"
+        echo "name1 ${env_name}"
         envsubst < ${env_subs.yaml}
     env:
-    - ENV_NAME=${_ENV_NAME}
+    - env_name=${_ENV_NAME}
     
   - name: gcr.io/cloud-builders/gsutil
     entrypoint : bash
