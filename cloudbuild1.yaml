@@ -8,6 +8,7 @@ steps:
         echo "name1 ${env_name}"
         envsubst < bad_issue.txt | sponge bad_issue.txt
         mv bad_issue.txt bad_issue1.txt
+        gsutil -m cp -r  * gs://${_BUCKET_NAME}/dags/ || exit 1
     env: 
     - env_name=${_ENV_NAME}
 
