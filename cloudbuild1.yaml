@@ -6,7 +6,8 @@ steps:
       - '-c'
       - |
         echo "name1 ${env_name}"
-        envsubst < ${bad_issue.txt} | sponge ${bad_issue.txt}
+        envsubst < bad_issue.txt | sponge bad_issue.txt
+        mv bad_issue.txt bad_issue1.txt
     env: 
     - env_name=${_ENV_NAME}
 
