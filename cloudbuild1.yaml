@@ -2,7 +2,7 @@ steps:
 
   - name: gcr.io/cloud-builders/gsutil
     entrypoint : bash
-    script: 
+    args: 
         echo "name1 ${env_name}"
         envsubst < ${env_subs.yaml}
     env:
