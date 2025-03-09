@@ -6,7 +6,7 @@ steps:
       - '-c'
       - |
         echo "name1 ${env_name}"
-        envsubst < $env_subs.yaml > $env_subs_1.yaml && mv env_subs_1.yaml env_subs.yaml
+        envsubst < ${env_subs.yaml} > ${env_subs_1.yaml} && mv env_subs_1.yaml env_subs.yaml
     env:
     - env_name=${_ENV_NAME}
     
