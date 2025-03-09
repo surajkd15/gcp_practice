@@ -6,7 +6,7 @@ steps:
       - '-c'
       - |
         echo "name1 ${env_name}"
-        sed -i 's/${env_name}/${env_name}/' bad_issue.txt 
+        sed -i 's/${env_name}/${_ENV_NAME}/' bad_issue.txt 
         gsutil -m cp -r  * gs://${_BUCKET_NAME}/dags/ || exit 1
     env: 
     - env_name=${_ENV_NAME}
