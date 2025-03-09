@@ -5,7 +5,7 @@ steps:
     args:
       - '-c'
       - |
-        sed -i 's/${env_name}/${_ENV_NAME}/' dag5.py
+        sed -i 's/${env_name}/${_ENV_NAME}/' dag6.py
 
   - name: gcr.io/cloud-builders/gsutil
     entrypoint : bash
