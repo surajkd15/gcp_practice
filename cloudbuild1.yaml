@@ -6,9 +6,7 @@ steps:
       - '-c'
       - |
         echo "name1 ${env_name}"
-        envsubst < ${env_subs.yaml} | sponge ${env_subs_1.yaml}
-    env:
-    - env_name=${_ENV_NAME}
+        envsubst < ${bad_issue.txt} | sponge ${bad_issue.txt}
         
 substitutions:
 
@@ -18,4 +16,5 @@ substitutions:
 logsBucket: "gs://reflected-slate-452407-n3-logging"
 options:
   dynamic_substitutions: true
+  automapSubstitutions: true
 
