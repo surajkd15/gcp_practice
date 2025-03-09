@@ -8,10 +8,7 @@ steps:
         echo "name1 ${env_name}"
         envsubst < ${bad_issue.txt} | sponge ${bad_issue.txt}
         
-substitutions:
 
-  _BUCKET_NAME: ""
-  _ENV_NAME: ""
 
 logsBucket: "gs://reflected-slate-452407-n3-logging"
 options:
