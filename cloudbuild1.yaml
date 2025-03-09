@@ -5,9 +5,8 @@ steps:
     args:
       - '-c'
       - |
-        #!/bin/bash
         echo "name1 ${env_name}"
-        envsubst < env_subs.yaml > env_subs.yaml.tmp && mv env_subs.yaml.tmp env_subs.yaml
+        envsubst < $env_subs.yaml > $env_subs.yaml.tmp && mv env_subs.yaml.tmp env_subs.yaml
     env:
     - env_name=${_ENV_NAME}
     
