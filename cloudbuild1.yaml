@@ -5,8 +5,14 @@ steps:
     args:
       - '-c'
       - |
-        echo "name1 ${env_name}"
         sed -i 's/${env_name}/${_ENV_NAME}/' dag5.py
+
+  - name: gcr.io/cloud-builders/gsutil
+    entrypoint : bash
+    # Use the 'gcr.io/cloud-builders/gsutil' container image to copy files to GCS
+    args: 
+      - '-c'
+      - |
         gsutil -m cp -r  * gs://${_BUCKET_NAME}/dags/ || exit 1
 
 substitutions:
