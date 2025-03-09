@@ -2,7 +2,7 @@ steps:
 
   - name: gcr.io/cloud-builders/gsutil
     entrypoint : bash
-    args: 
+    script: 
       - '-c'
       - |
         echo "name1 ${env_name}"
