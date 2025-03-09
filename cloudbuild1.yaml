@@ -2,8 +2,8 @@ steps:
 
   - name: 'Install gettext'
     script: |
-    apt-get update
-    apt-get install -y gettext
+      apt-get update
+      apt-get install -y gettext
     
   - name: gcr.io/cloud-builders/gsutil
     entrypoint : bash
