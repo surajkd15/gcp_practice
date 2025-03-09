@@ -3,7 +3,6 @@ steps:
   - name: gcr.io/cloud-builders/gsutil
     entrypoint : bash
     args:
-      - '-c'
         envsubst < ${env_subs.yaml}
     env:
     - env_name=${_ENV_NAME}
